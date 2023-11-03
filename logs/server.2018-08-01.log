@@ -1,0 +1,522 @@
+2018-08-01 12:13:22,843 [45956][main] INFO  p.l.b.BbSSOADFS - ====================================Operation InsertSSOADFS started====================================
+2018-08-01 12:13:22,860 [45956][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 12:13:22,869 [45956][main] INFO  p.l.b.u.EmailUtils - sending email
+2018-08-01 12:13:22,869 [45956][main] INFO  p.l.b.u.EmailUtils - Email HOST: smtp.university.edu.hk
+2018-08-01 12:13:22,925 [45956][main] INFO  p.l.b.u.EmailUtils - Email FROM: anonymous.last@inet.university.edu.hk
+2018-08-01 12:13:22,926 [45956][main] INFO  p.l.b.u.EmailUtils - Email TO: ng.wing.yin@university.edu.hk
+2018-08-01 12:13:22,927 [45956][main] INFO  p.l.b.u.EmailUtils - Email TO: anonymous.last@university.edu.hk
+2018-08-01 12:13:22,948 [45956][main] INFO  p.l.b.u.EmailUtils - Email SUBJECT: SSO ADFS Error (LearnDEV)
+2018-08-01 12:13:44,057 [45956][main] ERROR p.l.b.u.EmailUtils - Error occured when sending email.
+javax.mail.MessagingException: Could not connect to SMTP host: smtp.university.edu.hk, port: 25
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1961) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:654) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:295) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:176) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:125) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Transport.send0(Transport.java:194) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Transport.send(Transport.java:124) ~[mail-1.4.7.jar:1.4.7]
+	at university.learn.bbssoadfs.util.EmailUtils.send(EmailUtils.java:86) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.sendErrorEmail(SISFileEndpointOperationHandler.java:296) [classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.run(SISFileEndpointOperationHandler.java:59) [classes/:na]
+	at university.learn.bbssoadfs.operation.OperationHandlerContext.run(OperationHandlerContext.java:12) [classes/:na]
+	at university.learn.bbssoadfs.BbSSOADFS.main(BbSSOADFS.java:30) [classes/:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_161]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_161]
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:321) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:237) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1927) ~[mail-1.4.7.jar:1.4.7]
+	... 11 common frames omitted
+2018-08-01 12:13:44,151 [45956][main] INFO  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2018-08-01 12:13:44,155 [45956][main] INFO  o.h.Version - HHH000412: Hibernate Core {4.3.9.Final}
+2018-08-01 12:13:44,156 [45956][main] INFO  o.h.c.Environment - HHH000206: hibernate.properties not found
+2018-08-01 12:13:44,157 [45956][main] INFO  o.h.c.Environment - HHH000021: Bytecode provider name : javassist
+2018-08-01 12:13:44,170 [45956][main] INFO  o.h.c.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2018-08-01 12:13:44,170 [45956][main] INFO  o.h.c.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2018-08-01 12:13:44,214 [45956][main] INFO  o.h.c.Configuration - HHH000041: Configured SessionFactory: null
+2018-08-01 12:13:44,267 [45956][main] WARN  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2018-08-01 12:13:44,332 [45956][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://IT-15-0000123\SQLEXPRESS01:1433;databaseName=universityLmsDB]
+2018-08-01 12:13:44,332 [45956][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=TestuniversityLmsDBUser, password=****}
+2018-08-01 12:13:44,332 [45956][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2018-08-01 12:13:44,334 [45956][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-01 12:13:47,832 [45956][main] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2018-08-01 12:13:47,951 [45956][main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-08-01 12:13:47,961 [45956][main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-01 12:13:48,317 [45956][main] ERROR p.l.b.BbSSOADFS - Error occurred when performing InsertSSOADFS operation
+university.learn.bbssoadfs.operation.sis.SISException: Error occurred when running SISFileEndpointOperationHandler
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.run(SISFileEndpointOperationHandler.java:64) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.OperationHandlerContext.run(OperationHandlerContext.java:12) ~[classes/:na]
+	at university.learn.bbssoadfs.BbSSOADFS.main(BbSSOADFS.java:30) ~[classes/:na]
+Caused by: university.learn.bbssoadfs.operation.sis.SISException: Could not find the source file: D:\LmsAdminData\ADFSImportUser\DownloadFolder\sql-17.csv
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.GetFeedFile(SISFileEndpointOperationHandler.java:228) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.ImportFeedFile(SISFileEndpointOperationHandler.java:74) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.run(SISFileEndpointOperationHandler.java:52) ~[classes/:na]
+	... 2 common frames omitted
+2018-08-01 12:13:48,317 [45956][main] INFO  p.l.b.BbSSOADFS - ====================================Operation InsertSSOADFS ended====================================
+2018-08-01 12:13:48,317 [45956][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFS started====================================
+2018-08-01 12:13:48,319 [45956][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 12:13:48,336 [45956][main] INFO  p.l.b.u.EmailUtils - sending email
+2018-08-01 12:13:48,336 [45956][main] INFO  p.l.b.u.EmailUtils - Email HOST: smtp.university.edu.hk
+2018-08-01 12:13:48,336 [45956][main] INFO  p.l.b.u.EmailUtils - Email FROM: anonymous.last@inet.university.edu.hk
+2018-08-01 12:13:48,336 [45956][main] INFO  p.l.b.u.EmailUtils - Email TO: ng.wing.yin@university.edu.hk
+2018-08-01 12:13:48,336 [45956][main] INFO  p.l.b.u.EmailUtils - Email TO: anonymous.last@university.edu.hk
+2018-08-01 12:13:48,336 [45956][main] INFO  p.l.b.u.EmailUtils - Email SUBJECT: SSO ADFS Error (LearnDEV)
+2018-08-01 12:14:09,338 [45956][main] ERROR p.l.b.u.EmailUtils - Error occured when sending email.
+javax.mail.MessagingException: Could not connect to SMTP host: smtp.university.edu.hk, port: 25
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1961) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:654) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:295) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:176) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:125) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Transport.send0(Transport.java:194) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Transport.send(Transport.java:124) ~[mail-1.4.7.jar:1.4.7]
+	at university.learn.bbssoadfs.util.EmailUtils.send(EmailUtils.java:86) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.sendErrorEmail(SISFileEndpointOperationHandler.java:296) [classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.check(SISFileEndpointOperationHandler.java:113) [classes/:na]
+	at university.learn.bbssoadfs.operation.OperationHandlerContext.check(OperationHandlerContext.java:17) [classes/:na]
+	at university.learn.bbssoadfs.BbSSOADFS.main(BbSSOADFS.java:41) [classes/:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_161]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_161]
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:321) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:237) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1927) ~[mail-1.4.7.jar:1.4.7]
+	... 11 common frames omitted
+2018-08-01 12:14:09,344 [45956][main] ERROR p.l.b.BbSSOADFS - Error occurred when posting PostSSOADFS operation to SIS
+university.learn.bbssoadfs.operation.sis.SISException: Error occurred when running SISFileEndpointOperationHandler
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.check(SISFileEndpointOperationHandler.java:117) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.OperationHandlerContext.check(OperationHandlerContext.java:17) ~[classes/:na]
+	at university.learn.bbssoadfs.BbSSOADFS.main(BbSSOADFS.java:41) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: The feed file content is empty.
+	at university.learn.bbssoadfs.operation.sis.SISObjectMappingFileEndpointConfigProvider.getFeedFile(SISObjectMappingFileEndpointConfigProvider.java:31) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.generateFeedFile(SISFileEndpointOperationHandler.java:154) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.check(SISFileEndpointOperationHandler.java:96) ~[classes/:na]
+	... 2 common frames omitted
+2018-08-01 12:14:09,344 [45956][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFS ended====================================
+2018-08-01 12:14:09,344 [45956][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFSSecInstRole started====================================
+2018-08-01 12:14:09,346 [45956][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 12:14:09,356 [45956][main] INFO  p.l.b.u.EmailUtils - sending email
+2018-08-01 12:14:09,357 [45956][main] INFO  p.l.b.u.EmailUtils - Email HOST: smtp.university.edu.hk
+2018-08-01 12:14:09,357 [45956][main] INFO  p.l.b.u.EmailUtils - Email FROM: anonymous.last@inet.university.edu.hk
+2018-08-01 12:14:09,357 [45956][main] INFO  p.l.b.u.EmailUtils - Email TO: ng.wing.yin@university.edu.hk
+2018-08-01 12:14:09,357 [45956][main] INFO  p.l.b.u.EmailUtils - Email TO: anonymous.last@university.edu.hk
+2018-08-01 12:14:09,357 [45956][main] INFO  p.l.b.u.EmailUtils - Email SUBJECT: SSO ADFS Error (LearnDEV)
+2018-08-01 12:14:30,360 [45956][main] ERROR p.l.b.u.EmailUtils - Error occured when sending email.
+javax.mail.MessagingException: Could not connect to SMTP host: smtp.university.edu.hk, port: 25
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1961) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:654) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:295) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:176) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:125) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Transport.send0(Transport.java:194) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Transport.send(Transport.java:124) ~[mail-1.4.7.jar:1.4.7]
+	at university.learn.bbssoadfs.util.EmailUtils.send(EmailUtils.java:86) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.sendErrorEmail(SISFileEndpointOperationHandler.java:296) [classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.check(SISFileEndpointOperationHandler.java:113) [classes/:na]
+	at university.learn.bbssoadfs.operation.OperationHandlerContext.check(OperationHandlerContext.java:17) [classes/:na]
+	at university.learn.bbssoadfs.BbSSOADFS.main(BbSSOADFS.java:52) [classes/:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_161]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_161]
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:321) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:237) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1927) ~[mail-1.4.7.jar:1.4.7]
+	... 11 common frames omitted
+2018-08-01 12:14:30,363 [45956][main] ERROR p.l.b.BbSSOADFS - Error occurred when posting PostSSOADFSSecInstRole operation to SIS
+university.learn.bbssoadfs.operation.sis.SISException: Error occurred when running SISFileEndpointOperationHandler
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.check(SISFileEndpointOperationHandler.java:117) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.OperationHandlerContext.check(OperationHandlerContext.java:17) ~[classes/:na]
+	at university.learn.bbssoadfs.BbSSOADFS.main(BbSSOADFS.java:52) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: The feed file content is empty.
+	at university.learn.bbssoadfs.operation.sis.SISObjectMappingFileEndpointConfigProvider.getFeedFile(SISObjectMappingFileEndpointConfigProvider.java:31) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.generateFeedFile(SISFileEndpointOperationHandler.java:154) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.check(SISFileEndpointOperationHandler.java:96) ~[classes/:na]
+	... 2 common frames omitted
+2018-08-01 12:14:30,364 [45956][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFSSecInstRole ended====================================
+2018-08-01 12:14:30,364 [45956][main] INFO  p.l.b.BbSSOADFS - ====================================Operation UpdateSSOADFSLOG started====================================
+2018-08-01 12:14:30,366 [45956][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating Update/Delete SIS feed file
+2018-08-01 12:14:30,371 [45956][main] INFO  p.l.b.u.EmailUtils - sending email
+2018-08-01 12:14:30,372 [45956][main] INFO  p.l.b.u.EmailUtils - Email HOST: smtp.university.edu.hk
+2018-08-01 12:14:30,372 [45956][main] INFO  p.l.b.u.EmailUtils - Email FROM: anonymous.last@inet.university.edu.hk
+2018-08-01 12:14:30,372 [45956][main] INFO  p.l.b.u.EmailUtils - Email TO: ng.wing.yin@university.edu.hk
+2018-08-01 12:14:30,372 [45956][main] INFO  p.l.b.u.EmailUtils - Email TO: anonymous.last@university.edu.hk
+2018-08-01 12:14:30,372 [45956][main] INFO  p.l.b.u.EmailUtils - Email SUBJECT: SSO ADFS Error (LearnDEV)
+2018-08-01 12:14:51,374 [45956][main] ERROR p.l.b.u.EmailUtils - Error occured when sending email.
+javax.mail.MessagingException: Could not connect to SMTP host: smtp.university.edu.hk, port: 25
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1961) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:654) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:295) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:176) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Service.connect(Service.java:125) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Transport.send0(Transport.java:194) ~[mail-1.4.7.jar:1.4.7]
+	at javax.mail.Transport.send(Transport.java:124) ~[mail-1.4.7.jar:1.4.7]
+	at university.learn.bbssoadfs.util.EmailUtils.send(EmailUtils.java:86) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.sendErrorEmail(SISFileEndpointOperationHandler.java:296) [classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.update(SISFileEndpointOperationHandler.java:141) [classes/:na]
+	at university.learn.bbssoadfs.operation.OperationHandlerContext.update(OperationHandlerContext.java:22) [classes/:na]
+	at university.learn.bbssoadfs.BbSSOADFS.main(BbSSOADFS.java:64) [classes/:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_161]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_161]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_161]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_161]
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:321) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:237) ~[mail-1.4.7.jar:1.4.7]
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1927) ~[mail-1.4.7.jar:1.4.7]
+	... 11 common frames omitted
+2018-08-01 12:14:51,378 [45956][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:sqlserver://IT-15-0000123\SQLEXPRESS01:1433;databaseName=universityLmsDB]
+2018-08-01 12:14:51,380 [45956][main] ERROR p.l.b.BbSSOADFS - Error occurred when updating UpdateSSOADFSLOG operation to SIS
+university.learn.bbssoadfs.operation.sis.SISException: Error occurred when running SISFileEndpointOperationHandler
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.update(SISFileEndpointOperationHandler.java:145) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.OperationHandlerContext.update(OperationHandlerContext.java:22) ~[classes/:na]
+	at university.learn.bbssoadfs.BbSSOADFS.main(BbSSOADFS.java:64) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: The feed file content is empty.
+	at university.learn.bbssoadfs.operation.sis.SISObjectMappingFileEndpointConfigProvider.getFeedFile(SISObjectMappingFileEndpointConfigProvider.java:31) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.generateFeedFile(SISFileEndpointOperationHandler.java:154) ~[classes/:na]
+	at university.learn.bbssoadfs.operation.sis.SISFileEndpointOperationHandler.update(SISFileEndpointOperationHandler.java:132) ~[classes/:na]
+	... 2 common frames omitted
+2018-08-01 12:14:51,380 [45956][main] INFO  p.l.b.BbSSOADFS - ====================================Operation UpdateSSOADFSLOG ended====================================
+2018-08-01 12:15:38,864 [44148][main] INFO  p.l.b.BbSSOADFS - ====================================Operation InsertSSOADFS started====================================
+2018-08-01 12:15:38,879 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 12:15:39,012 [44148][main] INFO  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2018-08-01 12:15:39,017 [44148][main] INFO  o.h.Version - HHH000412: Hibernate Core {4.3.9.Final}
+2018-08-01 12:15:39,018 [44148][main] INFO  o.h.c.Environment - HHH000206: hibernate.properties not found
+2018-08-01 12:15:39,019 [44148][main] INFO  o.h.c.Environment - HHH000021: Bytecode provider name : javassist
+2018-08-01 12:15:39,032 [44148][main] INFO  o.h.c.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2018-08-01 12:15:39,033 [44148][main] INFO  o.h.c.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2018-08-01 12:15:39,070 [44148][main] INFO  o.h.c.Configuration - HHH000041: Configured SessionFactory: null
+2018-08-01 12:15:39,129 [44148][main] WARN  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2018-08-01 12:15:39,190 [44148][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://IT-15-0000123\SQLEXPRESS01:1433;databaseName=universityLmsDB]
+2018-08-01 12:15:39,191 [44148][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=TestuniversityLmsDBUser, password=****}
+2018-08-01 12:15:39,192 [44148][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2018-08-01 12:15:39,193 [44148][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-01 12:15:39,643 [44148][main] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2018-08-01 12:15:39,745 [44148][main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-08-01 12:15:39,749 [44148][main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-01 12:15:40,092 [44148][main] INFO  p.l.b.o.s.ADFSInsertUserConfigProvider - 0 were deleted from table <ADFSUser>
+2018-08-01 12:15:40,207 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - ***Total ADFS Users:  55 Row(s) *** 
+2018-08-01 12:15:40,208 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving feed file to completed dir
+2018-08-01 12:15:40,209 [44148][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from dowanload path D:\Development\DownloadFolder\sql-17.csv to processing path feedfile\processing\sql-17.csv
+2018-08-01 12:15:40,210 [44148][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\sql-17.csv to feedfile\completed\2018.08.01_12.15.40.sql-17.csv
+2018-08-01 12:15:40,218 [44148][main] INFO  p.l.b.BbSSOADFS - ====================================Operation InsertSSOADFS ended====================================
+2018-08-01 12:15:40,218 [44148][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFS started====================================
+2018-08-01 12:15:40,219 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 12:15:40,237 [44148][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISWrapper
+2018-08-01 12:15:40,242 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file generated: CADNUpdatePerson.txt
+2018-08-01 12:15:40,243 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file content size: 6
+2018-08-01 12:15:40,243 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - querying endpoint
+2018-08-01 12:15:40,247 [44148][main] INFO  p.l.b.o.s.SISClientFactory - Using SIS Client: HttpClient
+2018-08-01 12:15:40,248 [44148][main] INFO  p.l.b.o.s.SISClientFactory - SISClientContext - 
+endpoint: https://learnuat.university.edu.hk/webapps/bb-data-integration-flatfile-BBLEARN/endpoint/person/store
+username: 7604fd2f-7a64-4e56-a989-cdb4108a30f6
+password: F237DB98222EA642F2A45B679C5F0A1F
+feedFile: feedfile\processing\CADNUpdatePerson.txt
+2018-08-01 12:15:41,366 [44148][main] INFO  p.l.b.o.s.HttpSISClient - SISClient Time Elapsed: 1117ms
+2018-08-01 12:15:41,367 [44148][main] INFO  p.l.b.o.s.HttpSISClient - Http Response Code: 200
+2018-08-01 12:15:41,367 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - http response: Success: Feed File Uploaded.  Use the reference code b35076cd5f1b4fa5b982780f57c05331 to track these records in the logs.
+
+2018-08-01 12:15:41,367 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - Invoking callback of the class: class university.learn.bbssoadfs.operation.cadn.CADNUpdatePersonConfigProvider
+2018-08-01 12:15:41,367 [44148][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - Callback: Removing the password field from the feed file CADNUpdatePerson.txt
+2018-08-01 12:15:41,369 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving feed file to completed dir
+2018-08-01 12:15:41,373 [44148][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISWrapper
+2018-08-01 12:15:41,379 [44148][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISWrapper
+2018-08-01 12:15:41,383 [44148][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\CADNUpdatePerson.txt to feedfile\completed\2018.08.01_12.15.41.CADNUpdatePerson.txt
+2018-08-01 12:15:41,384 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - write to log table
+2018-08-01 12:15:41,384 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table started*******************
+2018-08-01 12:15:41,389 [44148][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - Total ADFS Log Update size: 6
+2018-08-01 12:15:41,398 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table ended*******************
+2018-08-01 12:15:41,398 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - check to log table
+2018-08-01 12:15:41,398 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table started*******************
+2018-08-01 12:15:41,411 [44148][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - Total ADFS Log Delete size: 49
+2018-08-01 12:15:41,573 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table ended*******************
+2018-08-01 12:15:41,577 [44148][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFS ended====================================
+2018-08-01 12:15:41,577 [44148][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFSSecInstRole started====================================
+2018-08-01 12:15:41,579 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 12:15:41,588 [44148][main] INFO  p.l.b.o.c.CADNUpdateSecInstRoleConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISSecInstRoleWrapper
+2018-08-01 12:15:41,590 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file generated: CADNInsertSecInstRole.txt
+2018-08-01 12:15:41,591 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file content size: 4
+2018-08-01 12:15:41,591 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - querying endpoint
+2018-08-01 12:15:41,591 [44148][main] INFO  p.l.b.o.s.SISClientFactory - Using SIS Client: HttpClient
+2018-08-01 12:15:41,591 [44148][main] INFO  p.l.b.o.s.SISClientFactory - SISClientContext - 
+endpoint: https://learnuat.university.edu.hk/webapps/bb-data-integration-flatfile-BBLEARN/endpoint/secondaryinstrole/store
+username: 7604fd2f-7a64-4e56-a989-cdb4108a30f6
+password: F237DB98222EA642F2A45B679C5F0A1F
+feedFile: feedfile\processing\CADNInsertSecInstRole.txt
+2018-08-01 12:15:41,794 [44148][main] INFO  p.l.b.o.s.HttpSISClient - SISClient Time Elapsed: 202ms
+2018-08-01 12:15:41,795 [44148][main] INFO  p.l.b.o.s.HttpSISClient - Http Response Code: 200
+2018-08-01 12:15:41,795 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - http response: Success: Feed File Uploaded.  Use the reference code b3f87a93f3f64890a94a6e1a85b02596 to track these records in the logs.
+
+2018-08-01 12:15:41,795 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - Invoking callback of the class: class university.learn.bbssoadfs.operation.cadn.CADNUpdateSecInstRoleConfigProvider
+2018-08-01 12:15:41,795 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving feed file to completed dir
+2018-08-01 12:15:41,798 [44148][main] INFO  p.l.b.o.c.CADNUpdateSecInstRoleConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISSecInstRoleWrapper
+2018-08-01 12:15:41,802 [44148][main] INFO  p.l.b.o.c.CADNUpdateSecInstRoleConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISSecInstRoleWrapper
+2018-08-01 12:15:41,804 [44148][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\CADNInsertSecInstRole.txt to feedfile\completed\2018.08.01_12.15.41.CADNInsertSecInstRole.txt
+2018-08-01 12:15:41,804 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - write to log table
+2018-08-01 12:15:41,804 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table started*******************
+2018-08-01 12:15:41,805 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table ended*******************
+2018-08-01 12:15:41,805 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - check to log table
+2018-08-01 12:15:41,805 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table started*******************
+2018-08-01 12:15:41,805 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table ended*******************
+2018-08-01 12:15:41,807 [44148][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFSSecInstRole ended====================================
+2018-08-01 12:15:41,807 [44148][main] INFO  p.l.b.BbSSOADFS - ====================================Operation UpdateSSOADFSLOG started====================================
+2018-08-01 12:15:41,809 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating Update/Delete SIS feed file
+2018-08-01 12:15:41,820 [44148][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISChangeWrapper
+2018-08-01 12:15:41,823 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file generated: CADNChangePerson.txt
+2018-08-01 12:15:41,824 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file content size: 49
+2018-08-01 12:15:41,824 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - querying Update/Delete SIS endpoint
+2018-08-01 12:15:41,825 [44148][main] INFO  p.l.b.o.s.SISClientFactory - Using SIS Client: HttpClient
+2018-08-01 12:15:41,825 [44148][main] INFO  p.l.b.o.s.SISClientFactory - SISClientContext - 
+endpoint: https://learnuat.university.edu.hk/webapps/bb-data-integration-flatfile-BBLEARN/endpoint/person/store
+username: 7604fd2f-7a64-4e56-a989-cdb4108a30f6
+password: F237DB98222EA642F2A45B679C5F0A1F
+feedFile: feedfile\processing\CADNChangePerson.txt
+2018-08-01 12:15:42,029 [44148][main] INFO  p.l.b.o.s.HttpSISClient - SISClient Time Elapsed: 204ms
+2018-08-01 12:15:42,029 [44148][main] INFO  p.l.b.o.s.HttpSISClient - Http Response Code: 200
+2018-08-01 12:15:42,029 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - http response: Success: Feed File Uploaded.  Use the reference code b94ae1c91a9b431e80ee3af11b0f63e4 to track these records in the logs.
+
+2018-08-01 12:15:42,030 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - Invoking callback of the class: class university.learn.bbssoadfs.operation.cadn.CADNChangePersonConfigProvider
+2018-08-01 12:15:42,030 [44148][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - Callback: Removing the password field from the feed file CADNChangePerson.txt
+2018-08-01 12:15:42,030 [44148][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving Update/Delete feed file to completed dir
+2018-08-01 12:15:42,036 [44148][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISChangeWrapper
+2018-08-01 12:15:42,045 [44148][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISChangeWrapper
+2018-08-01 12:15:42,048 [44148][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\CADNChangePerson.txt to feedfile\completed\2018.08.01_12.15.42.CADNChangePerson.txt
+2018-08-01 12:15:42,051 [44148][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:sqlserver://IT-15-0000123\SQLEXPRESS01:1433;databaseName=universityLmsDB]
+2018-08-01 12:15:42,052 [44148][main] INFO  p.l.b.BbSSOADFS - ====================================Operation UpdateSSOADFSLOG ended====================================
+2018-08-01 15:42:20,329 [46996][main] INFO  p.l.b.BbSSOADFS - ====================================Operation InsertSSOADFS started====================================
+2018-08-01 15:42:20,343 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 15:42:20,460 [46996][main] INFO  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2018-08-01 15:42:20,463 [46996][main] INFO  o.h.Version - HHH000412: Hibernate Core {4.3.9.Final}
+2018-08-01 15:42:20,464 [46996][main] INFO  o.h.c.Environment - HHH000206: hibernate.properties not found
+2018-08-01 15:42:20,465 [46996][main] INFO  o.h.c.Environment - HHH000021: Bytecode provider name : javassist
+2018-08-01 15:42:20,478 [46996][main] INFO  o.h.c.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2018-08-01 15:42:20,478 [46996][main] INFO  o.h.c.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2018-08-01 15:42:20,512 [46996][main] INFO  o.h.c.Configuration - HHH000041: Configured SessionFactory: null
+2018-08-01 15:42:20,564 [46996][main] WARN  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2018-08-01 15:42:20,621 [46996][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://IT-15-0000123\SQLEXPRESS01:1433;databaseName=universityLmsDB]
+2018-08-01 15:42:20,621 [46996][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=TestuniversityLmsDBUser, password=****}
+2018-08-01 15:42:20,621 [46996][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2018-08-01 15:42:20,622 [46996][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-01 15:42:21,052 [46996][main] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2018-08-01 15:42:21,153 [46996][main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-08-01 15:42:21,156 [46996][main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-01 15:42:21,475 [46996][main] INFO  p.l.b.o.s.ADFSInsertUserConfigProvider - 0 were deleted from table <ADFSUser>
+2018-08-01 15:42:21,644 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - ***Total ADFS Users:  55 Row(s) *** 
+2018-08-01 15:42:21,644 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving feed file to completed dir
+2018-08-01 15:42:21,646 [46996][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from dowanload path D:\Development\DownloadFolder\sql-17.csv to processing path feedfile\processing\sql-17.csv
+2018-08-01 15:42:21,646 [46996][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\sql-17.csv to feedfile\completed\2018.08.01_15.42.21.sql-17.csv
+2018-08-01 15:42:21,655 [46996][main] INFO  p.l.b.BbSSOADFS - ====================================Operation InsertSSOADFS ended====================================
+2018-08-01 15:42:21,656 [46996][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFS started====================================
+2018-08-01 15:42:21,657 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 15:42:21,673 [46996][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISWrapper
+2018-08-01 15:42:21,678 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file generated: CADNUpdatePerson.txt
+2018-08-01 15:42:21,678 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file content size: 6
+2018-08-01 15:42:21,678 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - querying endpoint
+2018-08-01 15:42:21,681 [46996][main] INFO  p.l.b.o.s.SISClientFactory - Using SIS Client: HttpClient
+2018-08-01 15:42:21,682 [46996][main] INFO  p.l.b.o.s.SISClientFactory - SISClientContext - 
+endpoint: https://learnuat.university.edu.hk/webapps/bb-data-integration-flatfile-BBLEARN/endpoint/person/store
+username: 7604fd2f-7a64-4e56-a989-cdb4108a30f6
+password: F237DB98222EA642F2A45B679C5F0A1F
+feedFile: feedfile\processing\CADNUpdatePerson.txt
+2018-08-01 15:42:22,579 [46996][main] INFO  p.l.b.o.s.HttpSISClient - SISClient Time Elapsed: 896ms
+2018-08-01 15:42:22,580 [46996][main] INFO  p.l.b.o.s.HttpSISClient - Http Response Code: 200
+2018-08-01 15:42:22,580 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - http response: Success: Feed File Uploaded.  Use the reference code a5344887cbf24f90a0079a427c8f2f12 to track these records in the logs.
+
+2018-08-01 15:42:22,580 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - Invoking callback of the class: class university.learn.bbssoadfs.operation.cadn.CADNUpdatePersonConfigProvider
+2018-08-01 15:42:22,580 [46996][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - Callback: Removing the password field from the feed file CADNUpdatePerson.txt
+2018-08-01 15:42:22,582 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving feed file to completed dir
+2018-08-01 15:42:22,586 [46996][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISWrapper
+2018-08-01 15:42:22,592 [46996][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISWrapper
+2018-08-01 15:42:22,596 [46996][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\CADNUpdatePerson.txt to feedfile\completed\2018.08.01_15.42.22.CADNUpdatePerson.txt
+2018-08-01 15:42:22,596 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - write to log table
+2018-08-01 15:42:22,596 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table started*******************
+2018-08-01 15:42:22,601 [46996][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - Total ADFS Log Update size: 6
+2018-08-01 15:42:22,610 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table ended*******************
+2018-08-01 15:42:22,610 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - check to log table
+2018-08-01 15:42:22,610 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table started*******************
+2018-08-01 15:42:22,624 [46996][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - Total ADFS Log Delete size: 49
+2018-08-01 15:42:22,673 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table ended*******************
+2018-08-01 15:42:22,675 [46996][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFS ended====================================
+2018-08-01 15:42:22,676 [46996][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFSSecInstRole started====================================
+2018-08-01 15:42:22,677 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 15:42:22,690 [46996][main] INFO  p.l.b.o.c.CADNUpdateSecInstRoleConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISSecInstRoleWrapper
+2018-08-01 15:42:22,695 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file generated: CADNInsertSecInstRole.txt
+2018-08-01 15:42:22,698 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file content size: 4
+2018-08-01 15:42:22,699 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - querying endpoint
+2018-08-01 15:42:22,700 [46996][main] INFO  p.l.b.o.s.SISClientFactory - Using SIS Client: HttpClient
+2018-08-01 15:42:22,700 [46996][main] INFO  p.l.b.o.s.SISClientFactory - SISClientContext - 
+endpoint: https://learnuat.university.edu.hk/webapps/bb-data-integration-flatfile-BBLEARN/endpoint/secondaryinstrole/store
+username: 7604fd2f-7a64-4e56-a989-cdb4108a30f6
+password: F237DB98222EA642F2A45B679C5F0A1F
+feedFile: feedfile\processing\CADNInsertSecInstRole.txt
+2018-08-01 15:42:22,901 [46996][main] INFO  p.l.b.o.s.HttpSISClient - SISClient Time Elapsed: 201ms
+2018-08-01 15:42:22,901 [46996][main] INFO  p.l.b.o.s.HttpSISClient - Http Response Code: 200
+2018-08-01 15:42:22,901 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - http response: Success: Feed File Uploaded.  Use the reference code 0196f2fb7eda4b28bc422453af675e9c to track these records in the logs.
+
+2018-08-01 15:42:22,902 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - Invoking callback of the class: class university.learn.bbssoadfs.operation.cadn.CADNUpdateSecInstRoleConfigProvider
+2018-08-01 15:42:22,902 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving feed file to completed dir
+2018-08-01 15:42:22,905 [46996][main] INFO  p.l.b.o.c.CADNUpdateSecInstRoleConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISSecInstRoleWrapper
+2018-08-01 15:42:22,909 [46996][main] INFO  p.l.b.o.c.CADNUpdateSecInstRoleConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISSecInstRoleWrapper
+2018-08-01 15:42:22,910 [46996][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\CADNInsertSecInstRole.txt to feedfile\completed\2018.08.01_15.42.22.CADNInsertSecInstRole.txt
+2018-08-01 15:42:22,911 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - write to log table
+2018-08-01 15:42:22,911 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table started*******************
+2018-08-01 15:42:22,911 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table ended*******************
+2018-08-01 15:42:22,911 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - check to log table
+2018-08-01 15:42:22,911 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table started*******************
+2018-08-01 15:42:22,911 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table ended*******************
+2018-08-01 15:42:22,913 [46996][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFSSecInstRole ended====================================
+2018-08-01 15:42:22,913 [46996][main] INFO  p.l.b.BbSSOADFS - ====================================Operation UpdateSSOADFSLOG started====================================
+2018-08-01 15:42:22,914 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating Update/Delete SIS feed file
+2018-08-01 15:42:22,922 [46996][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISChangeWrapper
+2018-08-01 15:42:22,925 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file generated: CADNChangePerson.txt
+2018-08-01 15:42:22,925 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file content size: 49
+2018-08-01 15:42:22,926 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - querying Update/Delete SIS endpoint
+2018-08-01 15:42:22,926 [46996][main] INFO  p.l.b.o.s.SISClientFactory - Using SIS Client: HttpClient
+2018-08-01 15:42:22,926 [46996][main] INFO  p.l.b.o.s.SISClientFactory - SISClientContext - 
+endpoint: https://learnuat.university.edu.hk/webapps/bb-data-integration-flatfile-BBLEARN/endpoint/person/store
+username: 7604fd2f-7a64-4e56-a989-cdb4108a30f6
+password: F237DB98222EA642F2A45B679C5F0A1F
+feedFile: feedfile\processing\CADNChangePerson.txt
+2018-08-01 15:42:23,129 [46996][main] INFO  p.l.b.o.s.HttpSISClient - SISClient Time Elapsed: 203ms
+2018-08-01 15:42:23,129 [46996][main] INFO  p.l.b.o.s.HttpSISClient - Http Response Code: 200
+2018-08-01 15:42:23,129 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - http response: Success: Feed File Uploaded.  Use the reference code 81a7cc89f5ea4052bebb85cec566f822 to track these records in the logs.
+
+2018-08-01 15:42:23,129 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - Invoking callback of the class: class university.learn.bbssoadfs.operation.cadn.CADNChangePersonConfigProvider
+2018-08-01 15:42:23,129 [46996][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - Callback: Removing the password field from the feed file CADNChangePerson.txt
+2018-08-01 15:42:23,129 [46996][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving Update/Delete feed file to completed dir
+2018-08-01 15:42:23,136 [46996][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISChangeWrapper
+2018-08-01 15:42:23,146 [46996][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISChangeWrapper
+2018-08-01 15:42:23,148 [46996][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\CADNChangePerson.txt to feedfile\completed\2018.08.01_15.42.23.CADNChangePerson.txt
+2018-08-01 15:42:23,151 [46996][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:sqlserver://IT-15-0000123\SQLEXPRESS01:1433;databaseName=universityLmsDB]
+2018-08-01 15:42:23,152 [46996][main] INFO  p.l.b.BbSSOADFS - ====================================Operation UpdateSSOADFSLOG ended====================================
+2018-08-01 16:26:20,575 [56068][main] INFO  p.l.b.BbSSOADFS - ====================================Operation InsertSSOADFS started====================================
+2018-08-01 16:26:20,584 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 16:26:20,708 [56068][main] INFO  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2018-08-01 16:26:20,713 [56068][main] INFO  o.h.Version - HHH000412: Hibernate Core {4.3.9.Final}
+2018-08-01 16:26:20,715 [56068][main] INFO  o.h.c.Environment - HHH000206: hibernate.properties not found
+2018-08-01 16:26:20,716 [56068][main] INFO  o.h.c.Environment - HHH000021: Bytecode provider name : javassist
+2018-08-01 16:26:20,729 [56068][main] INFO  o.h.c.Configuration - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2018-08-01 16:26:20,730 [56068][main] INFO  o.h.c.Configuration - HHH000040: Configuration resource: /hibernate.cfg.xml
+2018-08-01 16:26:20,764 [56068][main] INFO  o.h.c.Configuration - HHH000041: Configured SessionFactory: null
+2018-08-01 16:26:20,813 [56068][main] WARN  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2018-08-01 16:26:20,871 [56068][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://IT-15-0000123\SQLEXPRESS01:1433;databaseName=universityLmsDB]
+2018-08-01 16:26:20,872 [56068][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=TestuniversityLmsDBUser, password=****}
+2018-08-01 16:26:20,872 [56068][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+2018-08-01 16:26:20,874 [56068][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-01 16:26:21,310 [56068][main] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2018-08-01 16:26:21,409 [56068][main] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-08-01 16:26:21,413 [56068][main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-01 16:26:21,742 [56068][main] INFO  p.l.b.o.s.ADFSInsertUserConfigProvider - 0 were deleted from table <ADFSUser>
+2018-08-01 16:26:21,840 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - ***Total ADFS Users:  55 Row(s) *** 
+2018-08-01 16:26:21,840 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving feed file to completed dir
+2018-08-01 16:26:21,844 [56068][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from dowanload path D:\Development\DownloadFolder\sql-17.csv to processing path feedfile\processing\sql-17.csv
+2018-08-01 16:26:21,845 [56068][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\sql-17.csv to feedfile\completed\2018.08.01_16.26.21.sql-17.csv
+2018-08-01 16:26:21,852 [56068][main] INFO  p.l.b.BbSSOADFS - ====================================Operation InsertSSOADFS ended====================================
+2018-08-01 16:26:21,853 [56068][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFS started====================================
+2018-08-01 16:26:21,855 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 16:26:21,872 [56068][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISWrapper
+2018-08-01 16:26:21,878 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file generated: CADNUpdatePerson.txt
+2018-08-01 16:26:21,879 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file content size: 6
+2018-08-01 16:26:21,879 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - querying endpoint
+2018-08-01 16:26:21,882 [56068][main] INFO  p.l.b.o.s.SISClientFactory - Using SIS Client: HttpClient
+2018-08-01 16:26:21,883 [56068][main] INFO  p.l.b.o.s.SISClientFactory - SISClientContext - 
+endpoint: https://learnuat.university.edu.hk/webapps/bb-data-integration-flatfile-BBLEARN/endpoint/person/store
+username: 7604fd2f-7a64-4e56-a989-cdb4108a30f6
+password: F237DB98222EA642F2A45B679C5F0A1F
+feedFile: feedfile\processing\CADNUpdatePerson.txt
+2018-08-01 16:26:22,943 [56068][main] INFO  p.l.b.o.s.HttpSISClient - SISClient Time Elapsed: 1059ms
+2018-08-01 16:26:22,943 [56068][main] INFO  p.l.b.o.s.HttpSISClient - Http Response Code: 200
+2018-08-01 16:26:22,944 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - http response: Success: Feed File Uploaded.  Use the reference code 9fb0532e8b4748a38ce04631326daac3 to track these records in the logs.
+
+2018-08-01 16:26:22,946 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - Invoking callback of the class: class university.learn.bbssoadfs.operation.cadn.CADNUpdatePersonConfigProvider
+2018-08-01 16:26:22,947 [56068][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - Callback: Removing the password field from the feed file CADNUpdatePerson.txt
+2018-08-01 16:26:22,949 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving feed file to completed dir
+2018-08-01 16:26:22,954 [56068][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISWrapper
+2018-08-01 16:26:22,961 [56068][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISWrapper
+2018-08-01 16:26:22,966 [56068][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\CADNUpdatePerson.txt to feedfile\completed\2018.08.01_16.26.22.CADNUpdatePerson.txt
+2018-08-01 16:26:22,967 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - write to log table
+2018-08-01 16:26:22,968 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table started*******************
+2018-08-01 16:26:22,974 [56068][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - Total ADFS Log Update size: 6
+2018-08-01 16:26:22,984 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table ended*******************
+2018-08-01 16:26:22,984 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - check to log table
+2018-08-01 16:26:22,985 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table started*******************
+2018-08-01 16:26:22,999 [56068][main] INFO  p.l.b.o.c.CADNUpdatePersonConfigProvider - Total ADFS Log Delete size: 49
+2018-08-01 16:26:23,055 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table ended*******************
+2018-08-01 16:26:23,058 [56068][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFS ended====================================
+2018-08-01 16:26:23,059 [56068][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFSSecInstRole started====================================
+2018-08-01 16:26:23,060 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating feed file
+2018-08-01 16:26:23,067 [56068][main] INFO  p.l.b.o.c.CADNUpdateSecInstRoleConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISSecInstRoleWrapper
+2018-08-01 16:26:23,070 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file generated: CADNInsertSecInstRole.txt
+2018-08-01 16:26:23,071 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file content size: 4
+2018-08-01 16:26:23,072 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - querying endpoint
+2018-08-01 16:26:23,073 [56068][main] INFO  p.l.b.o.s.SISClientFactory - Using SIS Client: HttpClient
+2018-08-01 16:26:23,073 [56068][main] INFO  p.l.b.o.s.SISClientFactory - SISClientContext - 
+endpoint: https://learnuat.university.edu.hk/webapps/bb-data-integration-flatfile-BBLEARN/endpoint/secondaryinstrole/store
+username: 7604fd2f-7a64-4e56-a989-cdb4108a30f6
+password: F237DB98222EA642F2A45B679C5F0A1F
+feedFile: feedfile\processing\CADNInsertSecInstRole.txt
+2018-08-01 16:26:23,275 [56068][main] INFO  p.l.b.o.s.HttpSISClient - SISClient Time Elapsed: 201ms
+2018-08-01 16:26:23,275 [56068][main] INFO  p.l.b.o.s.HttpSISClient - Http Response Code: 200
+2018-08-01 16:26:23,277 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - http response: Success: Feed File Uploaded.  Use the reference code e5935173947e476d8ab654a23264193f to track these records in the logs.
+
+2018-08-01 16:26:23,278 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - Invoking callback of the class: class university.learn.bbssoadfs.operation.cadn.CADNUpdateSecInstRoleConfigProvider
+2018-08-01 16:26:23,279 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving feed file to completed dir
+2018-08-01 16:26:23,282 [56068][main] INFO  p.l.b.o.c.CADNUpdateSecInstRoleConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISSecInstRoleWrapper
+2018-08-01 16:26:23,287 [56068][main] INFO  p.l.b.o.c.CADNUpdateSecInstRoleConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISSecInstRoleWrapper
+2018-08-01 16:26:23,290 [56068][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\CADNInsertSecInstRole.txt to feedfile\completed\2018.08.01_16.26.23.CADNInsertSecInstRole.txt
+2018-08-01 16:26:23,290 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - write to log table
+2018-08-01 16:26:23,291 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table started*******************
+2018-08-01 16:26:23,292 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************write to log table ended*******************
+2018-08-01 16:26:23,293 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - check to log table
+2018-08-01 16:26:23,294 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table started*******************
+2018-08-01 16:26:23,294 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - *******************check to log table ended*******************
+2018-08-01 16:26:23,297 [56068][main] INFO  p.l.b.BbSSOADFS - ====================================Operation PostSSOADFSSecInstRole ended====================================
+2018-08-01 16:26:23,297 [56068][main] INFO  p.l.b.BbSSOADFS - ====================================Operation UpdateSSOADFSLOG started====================================
+2018-08-01 16:26:23,298 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - generating Update/Delete SIS feed file
+2018-08-01 16:26:23,306 [56068][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISChangeWrapper
+2018-08-01 16:26:23,310 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file generated: CADNChangePerson.txt
+2018-08-01 16:26:23,311 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - feed file content size: 49
+2018-08-01 16:26:23,311 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - querying Update/Delete SIS endpoint
+2018-08-01 16:26:23,313 [56068][main] INFO  p.l.b.o.s.SISClientFactory - Using SIS Client: HttpClient
+2018-08-01 16:26:23,313 [56068][main] INFO  p.l.b.o.s.SISClientFactory - SISClientContext - 
+endpoint: https://learnuat.university.edu.hk/webapps/bb-data-integration-flatfile-BBLEARN/endpoint/person/store
+username: 7604fd2f-7a64-4e56-a989-cdb4108a30f6
+password: F237DB98222EA642F2A45B679C5F0A1F
+feedFile: feedfile\processing\CADNChangePerson.txt
+2018-08-01 16:26:23,517 [56068][main] INFO  p.l.b.o.s.HttpSISClient - SISClient Time Elapsed: 203ms
+2018-08-01 16:26:23,517 [56068][main] INFO  p.l.b.o.s.HttpSISClient - Http Response Code: 200
+2018-08-01 16:26:23,519 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - http response: Success: Feed File Uploaded.  Use the reference code 25eb00aad67c4e45943e35a620bdd944 to track these records in the logs.
+
+2018-08-01 16:26:23,520 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - Invoking callback of the class: class university.learn.bbssoadfs.operation.cadn.CADNChangePersonConfigProvider
+2018-08-01 16:26:23,521 [56068][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - Callback: Removing the password field from the feed file CADNChangePerson.txt
+2018-08-01 16:26:23,521 [56068][main] INFO  p.l.b.o.s.SISFileEndpointOperationHandler - moving Update/Delete feed file to completed dir
+2018-08-01 16:26:23,530 [56068][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISChangeWrapper
+2018-08-01 16:26:23,540 [56068][main] INFO  p.l.b.o.c.CADNChangePersonConfigProvider - The wrapper class: class university.learn.bbssoadfs.operation.cadn.CADNSISChangeWrapper
+2018-08-01 16:26:23,543 [56068][main] INFO  p.l.b.u.SISFileUtils - Moved the feed file from feedfile\processing\CADNChangePerson.txt to feedfile\completed\2018.08.01_16.26.23.CADNChangePerson.txt
+2018-08-01 16:26:23,546 [56068][main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000030: Cleaning up connection pool [jdbc:sqlserver://IT-15-0000123\SQLEXPRESS01:1433;databaseName=universityLmsDB]
+2018-08-01 16:26:23,547 [56068][main] INFO  p.l.b.BbSSOADFS - ====================================Operation UpdateSSOADFSLOG ended====================================

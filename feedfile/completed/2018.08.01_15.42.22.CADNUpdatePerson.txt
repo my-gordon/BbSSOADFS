@@ -1,0 +1,7 @@
+EXTERNAL_PERSON_KEY|USER_ID|FIRSTNAME|LASTNAME|PASSWD|EMAIL|STUDENT_ID|DEPARTMENT|INSTITUTION_ROLE|AVAILABLE_IND|DATA_SOURCE_KEY|NEW_DATA_SOURCE_KEY
+13000001d|13000001d|anonymous Test|KKK|8x4Aeuyl|13000001d@connect.university.hk|13000001d|ttt|STUDENT|Y|university_ADFS|university
+bbstaff002|bbstaff002|anonymous Test|KKK|g60DkSgc|bbstaff002@university.edu.hk||ttt|STUDENT|Y|university_ADFS|university
+bbstaff004|bbstaff004|anonymous Test|KKK|9aU1XgMB|bbstaff004@university.edu.hk||ttt|STUDENT|Y|university_ADFS|university
+bbstaff005|bbstaff005|anonymous Test|KKK|fhAW4AMC|wei.a.liu@university.edu.hk|bbstaff005|ttt|STUDENT|Y|university_ADFS|university
+vgstaff1|vgstaff1|anonymous Test|KKK|A2JI2G4x|vgstaff1@university.edu.hk||ttt|STUDENT|Y|university_ADFS|university
+vgstaff2|vgstaff2|anonymous Test|KKK|09nd48F4|vgstaff2@university.edu.hk||ttt|STUDENT|Y|university_ADFS|university

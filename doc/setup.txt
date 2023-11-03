@@ -1,0 +1,16 @@
+1. create DSK in UI
+2. create SIS integrations in UI, course copy settings
+3. run sql
+4. modify config settings
+5. deploy program
+
+
+TODO:
+TA role
+masking methods
+OGUR feed file dir
+insert enrollment sql
+template2012api -> template2015api
+
+
+

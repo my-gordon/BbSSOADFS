@@ -1,0 +1,5 @@
+EXTERNAL_PERSON_KEY|ROLE_ID|DATA_SOURCE_KEY
+bbstaff002|STAFF|university
+bbstaff004|STAFF|university
+vgstaff1|STAFF|university
+vgstaff2|STAFF|university
