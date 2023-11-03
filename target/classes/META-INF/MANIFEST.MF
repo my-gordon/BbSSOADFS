@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Built-By: mengyin
+Class-Path: lib/slf4j-api-1.7.12.jar lib/logback-classic-1.1.3.jar lib
+ /logback-core-1.1.3.jar lib/hibernate-core-4.3.9.Final.jar lib/jboss-
+ logging-3.1.3.GA.jar lib/jboss-logging-annotations-1.2.0.Beta1.jar li
+ b/jboss-transaction-api_1.2_spec-1.0.0.Final.jar lib/dom4j-1.6.1.jar 
+ lib/xml-apis-1.0.b2.jar lib/hibernate-commons-annotations-4.0.5.Final
+ .jar lib/hibernate-jpa-2.1-api-1.0.0.Final.jar lib/javassist-3.18.1-G
+ A.jar lib/antlr-2.7.7.jar lib/jandex-1.1.0.Final.jar lib/sqljdbc41-4.
+ 1.jar lib/commons-lang3-3.4.jar lib/commons-io-2.4.jar lib/junit-4.12
+ .jar lib/hamcrest-core-1.3.jar lib/commons-codec-1.10.jar lib/mail-1.
+ 4.7.jar lib/activation-1.1.jar
+Build-Jdk: 1.8.0_161
+Created-By: Maven Integration for Eclipse
+Main-Class: polyu.learn.bbssoadfs.BbSSOADFS
+
